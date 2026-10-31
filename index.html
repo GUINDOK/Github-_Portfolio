@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kadidiatou Guindo | Chargée d'études énergies</title>
+    <title>Kadidiatou Guindo | Ingénieure Éco-Énergétique</title>
     <style>
         :root {
-            --primary: #1e293b;
-            --primary-accent: #2c3e50;
-            --accent-blue: #3b5998;
+            /* Palette Bleu Nuit Sophistiqué & Ardoise */
+            --primary: #1e293b;         /* Ardoise sombre haut de gamme */
+            --primary-accent: #2c3e50;  /* Bleu nuit profond */
+            --accent-blue: #3b5998;     /* Bleu tailleur discret */
             --bg-light: #f8fafc;
-            --badge-bg: #eef2f6;
+            --badge-bg: #eef2f6;        /* Gris-bleu très doux */
             --badge-text: #334155;
-            --text-main: #0f172a;
+            --text-main: #0f172a;       /* Encre sombre élégante */
             --text-muted: #64748b;
             --border-color: #e2e8f0;
         }
@@ -41,13 +42,13 @@
         .header-profile {
             display: flex;
             align-items: center;
-            gap: 2.5rem;
+            gap: 2rem;
             flex-wrap: wrap;
         }
         .profile-img {
-            width: 150px;
+            width: 140px;
             height: auto;
-            max-height: 180px;
+            max-height: 170px;
             border-radius: 12px;
             object-fit: contain;
             border: 1px solid var(--border-color);
@@ -127,6 +128,37 @@
             border-color: #cbd5e1;
         }
 
+        /* QR Code Ka Pian */
+        .qr-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            background: #ffffff;
+            box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+            text-decoration: none;
+            color: var(--text-muted);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .qr-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+        }
+        .qr-img {
+            width: 105px;
+            height: 105px;
+            display: block;
+        }
+        .qr-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary-accent);
+            margin-top: 0.35rem;
+        }
+
         h2 { 
             color: var(--primary-accent); 
             margin: 2rem 0 1rem; 
@@ -167,6 +199,7 @@
     <div class="container">
         <header>
             <div class="header-profile">
+                <!-- Touxiang -->
                 <img src="photo.png" alt="Kadidiatou Guindo" class="profile-img">
 
                 <div class="header-info">
@@ -180,10 +213,16 @@
 
                     <div class="actions">
                         <a href="CV_2026-10-31_Kadidiatou_GUINDO.pdf" target="_blank" class="btn btn-primary">📄 Télécharger mon CV (PDF)</a>
-                        <a href="https://www.linkedin.com" target="_blank" class="btn btn-secondary">🔗 Profil LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/kadidiatou-guindo-%C3%A9nergies-prospection-efficacit%C3%A9-cdi/" target="_blank" class="btn btn-secondary">🔗 Profil LinkedIn</a>
                         <a href="mailto:votre.email@exemple.com" class="btn btn-secondary">✉️ Me contacter</a>
                     </div>
                 </div>
+
+                <!-- LinkedIn QR Code -->
+                <a href="https://www.linkedin.com/in/kadidiatou-guindo-%C3%A9nergies-prospection-efficacit%C3%A9-cdi/" target="_blank" class="qr-card" title="Scanner pour ouvrir mon profil LinkedIn">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fkadidiatou-guindo-%25C3%25A9nergies-prospection-efficacit%25C3%25A9-cdi%2F" alt="QR Code LinkedIn" class="qr-img">
+                    <span class="qr-label">📱 Scan LinkedIn</span>
+                </a>
             </div>
         </header>
 
