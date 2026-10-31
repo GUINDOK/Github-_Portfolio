@@ -3,383 +3,394 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kadidiatou Guindo | Ingénieure Éco-Énergétique</title>
+    <title>Kadidiatou GUINDO - Portfolio | Chargée d'études Énergie</title>
     <style>
+        :root {
+            --primary-blue: #0969da;
+            --primary-dark: #1f2328;
+            --text-main: #24292f;
+            --text-muted: #57606a;
+            --bg-light: #f6f8fa;
+            --border-color: #d0d7de;
+            --tag-bg: #ddf4ff;
+            --tag-text: #0969da;
+        }
+
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #0b1120;
-            color: #f8fafc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+            color: var(--text-main);
+            background-color: #ffffff;
             line-height: 1.6;
         }
 
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(11, 17, 32, 0.95);
-            border-bottom: 1px solid #1e293b;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .nav-logo {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: #ffffff;
-            text-decoration: none;
-        }
-        .nav-logo span { color: #38bdf8; }
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-            list-style: none;
-        }
-        .nav-links a {
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-        .nav-links a:hover { color: #38bdf8; }
-
-        .container {
-            max-width: 950px;
+        .page-wrapper {
+            max-width: 1100px;
             margin: 0 auto;
             padding: 2.5rem 1.5rem;
-        }
-
-        section {
-            padding: 3rem 0;
-            border-bottom: 1px solid #1e293b;
-        }
-        .section-tag {
-            color: #38bdf8;
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            display: block;
-            margin-bottom: 0.35rem;
-        }
-        h2 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #ffffff;
-        }
-
-        .hero-layout {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        .hero-text {
-            flex: 1;
-            min-width: 280px;
-        }
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background-color: rgba(34, 197, 94, 0.15);
-            border: 1px solid rgba(34, 197, 94, 0.3);
-            color: #4ade80;
-            font-size: 0.82rem;
-            font-weight: 600;
-            padding: 0.35rem 0.85rem;
-            border-radius: 9999px;
-            margin-bottom: 1rem;
-        }
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #22c55e;
-            border-radius: 50%;
-        }
-        h1 {
-            font-size: 2.3rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 0.5rem;
-            color: #ffffff;
-        }
-        .hero-subtitle {
-            font-size: 1.15rem;
-            color: #38bdf8;
-            margin-bottom: 1rem;
-            font-weight: 500;
-        }
-        .hero-desc {
-            color: #94a3b8;
-            font-size: 0.98rem;
-            margin-bottom: 1.5rem;
-            max-width: 520px;
-        }
-
-        .hero-visuals {
-            display: flex;
-            align-items: center;
-            gap: 1.25rem;
-            flex-wrap: wrap;
-        }
-        .profile-img {
-            width: 140px;
-            height: 170px;
-            object-fit: contain;
-            background-color: #ffffff;
-            border-radius: 12px;
-            border: 2px solid #334155;
-            display: block;
-        }
-        .qr-card {
-            background: #1e293b;
-            border: 1px solid #334155;
-            border-radius: 12px;
-            padding: 0.75rem;
-            text-align: center;
-            text-decoration: none;
-            display: block;
-            transition: border-color 0.2s;
-        }
-        .qr-card:hover { border-color: #38bdf8; }
-        .qr-img {
-            width: 95px;
-            height: 95px;
-            border-radius: 6px;
-            background: #ffffff;
-            padding: 4px;
-            display: block;
-        }
-        .qr-label {
-            display: block;
-            margin-top: 0.4rem;
-            font-size: 0.75rem;
-            color: #f8fafc;
-            font-weight: 600;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.65rem 1.25rem;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-        .btn-primary {
-            background: #38bdf8;
-            color: #0f172a;
-        }
-        .btn-primary:hover {
-            background: #7dd3fc;
-        }
-        .btn-outline {
-            border: 1px solid #334155;
-            color: #f8fafc;
-            background: #1e293b;
-        }
-        .btn-outline:hover { background: #334155; }
-
-        .badge-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.6rem;
-        }
-        .skill-badge {
-            background: #1e293b;
-            border: 1px solid #334155;
-            color: #f8fafc;
-            padding: 0.5rem 0.9rem;
-            border-radius: 8px;
-            font-size: 0.88rem;
-        }
-
-        .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.25rem;
+            grid-template-columns: 300px 1fr;
+            gap: 2.5rem;
         }
-        .project-card {
-            background: #1e293b;
-            border: 1px solid #334155;
-            border-radius: 12px;
-            padding: 1.5rem;
+
+        /* Colonne de gauche (Profil) */
+        .sidebar {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            gap: 1.5rem;
         }
-        .project-card h3 {
-            font-size: 1.05rem;
+        .profile-name-sidebar h2 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+        .profile-img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            display: block;
+        }
+        .sidebar-tagline {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .download-box {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .btn-side {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.55rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            text-decoration: none;
+            transition: 0.2s ease;
+        }
+        .btn-primary {
+            background-color: var(--primary-blue);
             color: #ffffff;
         }
-        .project-card p {
-            font-size: 0.9rem;
-            color: #94a3b8;
+        .btn-primary:hover { background-color: #0550ae; }
+        .btn-secondary {
+            background-color: #ffffff;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
         }
-        .project-meta {
-            margin-top: 1rem;
-            display: flex;
-            gap: 0.4rem;
-            flex-wrap: wrap;
+        .btn-secondary:hover { background-color: #f3f4f6; }
+        
+        .qr-section {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
         }
-        .project-tag {
+        .qr-section img {
+            width: 120px;
+            height: 120px;
+            display: block;
+            margin: 0 auto;
+        }
+        .qr-label {
             font-size: 0.75rem;
-            color: #38bdf8;
-            background: rgba(56, 189, 248, 0.1);
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-top: 0.5rem;
+            display: block;
+            text-decoration: none;
+        }
+
+        /* Colonne principale droite */
+        .content-area {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin-bottom: 0.75rem;
+        }
+        .highlight-banner {
+            background-color: #eaf5ff;
+            border-left: 4px solid var(--primary-blue);
+            padding: 1rem 1.2rem;
+            font-size: 0.95rem;
+            color: #0550ae;
+            border-radius: 0 6px 6px 0;
+            line-height: 1.6;
+        }
+
+        section h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 0.8rem;
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 0.4rem;
+        }
+
+        .list-styled {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .list-styled li {
+            position: relative;
+            padding-left: 1.3rem;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+        .list-styled li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            line-height: 1.3;
+        }
+
+        /* Blocs d'expérience & projets */
+        .project-block {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .project-block h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.3rem;
+        }
+        .project-tag-pill {
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+        }
+        .project-block p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0.6rem;
+        }
+        .gain-highlight {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1a7f37;
+        }
+
+        /* Compétences / Badges */
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        .badge {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-color);
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-main);
         }
 
         footer {
-            padding: 3rem 0;
-            text-align: center;
-            color: #64748b;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+            margin-top: 2rem;
             font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
         }
 
-        @media (max-width: 640px) {
-            .nav-links { display: none; }
+        @media (max-width: 820px) {
+            .page-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                align-items: center;
+                text-align: center;
+            }
+            .profile-img {
+                max-width: 200px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <a href="#hero" class="nav-logo">Kadidiatou <span>Guindo</span></a>
-        <ul class="nav-links">
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#skills">Compétences</a></li>
-            <li><a href="#projects">Réalisations</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="page-wrapper">
 
-    <div class="container">
-
-        <section id="hero">
-            <div class="hero-layout">
-                <div class="hero-text">
-                    <div class="status-badge">
-                        <span class="status-dot"></span>
-                        À l'écoute d'opportunités (CDI) • Île-de-France & Mobilité
-                    </div>
-                    <h1>Kadidiatou Guindo</h1>
-                    <div class="hero-subtitle">Ingénieure Éco-Énergétique • Conduite de Projets</div>
-                    <p class="hero-desc">
-                        Audit thermique, dimensionnement CVC/PAC, rédaction de CCTP et pilotage de démarches de décarbonation du bâtiment.
-                    </p>
-                    <div class="btn-group">
-                        <a href="CV_2026-10-31_Kadidiatou_GUINDO.pdf" target="_blank" class="btn btn-primary">📄 Télécharger mon CV (PDF)</a>
-                        <a href="#contact" class="btn btn-outline">✉️ Me contacter</a>
-                    </div>
-                </div>
-
-                <div class="hero-visuals">
-                    <img src="photo.png" alt="Kadidiatou Guindo" class="profile-img">
-                    <a href="https://www.linkedin.com/in/kadidiatou-guindo-%C3%A9nergies-prospection-efficacit%C3%A9-cdi/" target="_blank" class="qr-card" title="Profil LinkedIn">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fkadidiatou-guindo-%25C3%25A9nergies-prospection-efficacit%25C3%25A9-cdi%2F" alt="QR Code LinkedIn" class="qr-img">
-                        <span class="qr-label">QR Code LinkedIn</span>
-                    </a>
-                </div>
+        <!-- Barre Latérale Gauche -->
+        <aside class="sidebar">
+            <div class="profile-name-sidebar">
+                <h2>Kadidiatou<br>GUINDO</h2>
             </div>
-        </section>
 
-        <section id="about">
-            <span class="section-tag">Parcours</span>
-            <h2>À propos de mon profil</h2>
-            <p style="color: #94a3b8; max-width: 760px; line-height: 1.8;">
-                Titulaire d'un <strong>Master Éco-Énergétique (Bac +5)</strong>, j'interviens de la phase diagnostic et audit initial jusqu'au dimensionnement précis et à la rédaction des CCTP. Mon approche allie rigueur de calcul thermique (DJU, simulations, CEE) et gestion opérationnelle de projet.
+            <img src="photo.png" alt="Kadidiatou GUINDO" class="profile-img">
+
+            <p class="sidebar-tagline">
+                <strong>Ingénieure en Efficacité Énergétique</strong><br>
+                Chargée d'études Énergies (CDI)<br>
+                Paris et Île-de-France (Mobile)
             </p>
-        </section>
 
-        <section id="skills">
-            <span class="section-tag">Savoir-faire</span>
-            <h2>Domaines d'expertise & Outils</h2>
-            <div class="badge-grid">
-                <span class="skill-badge">Audit & Performance Énergétique</span>
-                <span class="skill-badge">Simulation Thermique Dynamique</span>
-                <span class="skill-badge">Dimensionnement CVC & PAC</span>
-                <span class="skill-badge">Rédaction de CCTP & Chiffrage</span>
-                <span class="skill-badge">Dossiers CEE & Réglementation</span>
-                <span class="skill-badge">PVsyst</span>
-                <span class="skill-badge">AutoCAD</span>
-                <span class="skill-badge">BAO SED Évolution</span>
-                <span class="skill-badge">Node-RED / IoT</span>
-            </div>
-        </section>
-
-        <section id="projects">
-            <span class="section-tag">Expérience</span>
-            <h2>Projets & Réalisations Clés</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div>
-                        <h3>Rénovation Énergétique & Remplacement Chaufferie (750 kW)</h3>
-                        <p>Audit DPE, calcul de DJU, métrés sous AutoCAD et simulations thermiques complètes. Stratégie ayant validé une réduction de 45% de la consommation énergétique.</p>
-                    </div>
-                    <div class="project-meta">
-                        <span class="project-tag">BAO SED Évolution</span>
-                        <span class="project-tag">AutoCAD</span>
-                        <span class="project-tag">-45% Énergie</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div>
-                        <h3>Supervision & Télémétrie IoT pour Suivi Énergétique</h3>
-                        <p>Mise en place d'une chaîne d'acquisition de données thermiques et d'humidité via MQTT (Mosquitto) avec affichage sur tableau de bord interactif.</p>
-                    </div>
-                    <div class="project-meta">
-                        <span class="project-tag">Node-RED</span>
-                        <span class="project-tag">MQTT</span>
-                        <span class="project-tag">IoT</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div>
-                        <h3>Études Solaires & Dimensionnement Photovoltaïque</h3>
-                        <p>Modélisation d'installations solaires, analyse des masques d'ombrage et calcul prévisionnel du productible annuel selon les profils d'usage.</p>
-                    </div>
-                    <div class="project-meta">
-                        <span class="project-tag">PVsyst</span>
-                        <span class="project-tag">Solaire PV</span>
-                    </div>
+            <div class="download-box">
+                <a href="CV_2026-10-31_Kadidiatou_GUINDO.pdf" target="_blank" class="btn-side btn-primary">
+                    📄 Télécharger mon CV (PDF)
+                </a>
+                <a href="https://www.linkedin.com/in/kadidiatou-guindo-%C3%A9nergies-prospection-efficacit%C3%A9-cdi/" target="_blank" class="btn-side btn-secondary">
+                    🔗 Profil LinkedIn
+                </a>
+                <a href="mailto:kadidiatou.guindo695@gmail.com" class="btn-side btn-secondary">
+                    ✉️ kadidiatou.guindo695@gmail.com
+                </a>
+                <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 0.3rem;">
+                    📞 07 68 49 19 92
                 </div>
             </div>
-        </section>
 
-        <section id="contact" style="border-bottom: none;">
-            <span class="section-tag">Échange</span>
-            <h2>Me contacter</h2>
-            <p style="color: #94a3b8; margin-bottom: 1.5rem;">
-                Disponible pour un poste en CDI sur l'Île-de-France et mobile pour des déplacements.
-            </p>
-            <div class="btn-group">
-                <a href="https://www.linkedin.com/in/kadidiatou-guindo-%C3%A9nergies-prospection-efficacit%C3%A9-cdi/" target="_blank" class="btn btn-primary">🔗 Profil LinkedIn</a>
-                <a href="mailto:votre.email@exemple.com" class="btn btn-outline">✉️ M'envoyer un email</a>
+            <div class="qr-section">
+                <a href="https://www.linkedin.com/in/kadidiatou-guindo-%C3%A9nergies-prospection-efficacit%C3%A9-cdi/" target="_blank">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fkadidiatou-guindo-%25C3%25A9nergies-prospection-efficacit%25C3%25A9-cdi%2F" alt="QR Code LinkedIn">
+                    <span class="qr-label">📱 Scanner mon profil LinkedIn</span>
+                </a>
             </div>
-        </section>
+        </aside>
 
-        <footer>
-            © 2026 Kadidiatou Guindo • Ingénieure Éco-Énergétique
-        </footer>
+        <!-- Contenu Principal Droit -->
+        <main class="content-area">
+
+            <div class="main-header">
+                <h1>Kadidiatou GUINDO – Portfolio</h1>
+                <div class="highlight-banner">
+                    <strong>Bienvenue sur mon portfolio professionnel.</strong><br>
+                    Diplômée d'un <strong>Master Éco-Énergétique (Bac +5)</strong> avec 3 ans d'alternance industrielle (Michelin, Safran, Rockwool), je recherche un poste de <strong>Chargée d'études en efficacité énergétique</strong> en CDI pour accompagner la décarbonation, optimiser les consommations et dimensionner les installations thermiques et CVC.
+                </div>
+            </div>
+
+            <!-- Projet Professionnel -->
+            <section>
+                <h3>Mon Projet Professionnel</h3>
+                <p style="margin-bottom: 0.75rem; font-size: 0.95rem; color: var(--text-main);">
+                    Passionnée par l'efficacité énergétique et la valorisation des énergies renouvelables, mon objectif est d'accompagner les acteurs du bâtiment et de l'industrie dans la définition et le déploiement de solutions bas-carbone performantes :
+                </p>
+                <ul class="list-styled">
+                    <li><strong>Objectif à court terme :</strong> Déployer mon expertise technique en bureau d'études (audits DPE, calculs DJU, simulations sous BAO SED Évolution / Pléiades, chiffrage CAPEX/OPEX et dossiers CEE).</li>
+                    <li><strong>Vision à 3–5 ans :</strong> Évoluer vers le pilotage complet de projets de transition énergétique, de la phase de cadrage et de rédaction des CCTP jusqu'à la réception technique sur site.</li>
+                </ul>
+            </section>
+
+            <!-- À propos de mon parcours -->
+            <section>
+                <h3>À propos de moi</h3>
+                <ul class="list-styled">
+                    <li><strong>Diplôme :</strong> Master Éco-Énergétique (Bac +5) – ENSIATE & Double Licence SPI Énergie & Développement Durable (CNAM / ENSIATE).</li>
+                    <li><strong>3 années d'expérience industrielle en alternance :</strong>
+                        <ul style="padding-left: 1.2rem; margin-top: 0.3rem; list-style-type: circle; color: var(--text-muted); font-size: 0.9rem;">
+                            <li><strong>Rockwool :</strong> Pilotage de 36 départements, veille marché (HELO, collectifs, industrie) et gestion de plus de 300 projets.</li>
+                            <li><strong>Safran Actuation Systems :</strong> Déploiement méthodologique ACV (ISO 14040/44) et reporting développement durable.</li>
+                            <li><strong>Michelin (Pneu Laurent) :</strong> Projet de décarbonation d'atelier (PAC industrielle), rédaction de CCTP et sélection d'offres.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Certification complémentaire :</strong> AI Fundamentals (Google / Coursera).</li>
+                </ul>
+            </section>
+
+            <!-- Ce que je fais et ce que j'apporte -->
+            <section>
+                <h3>Ce que je fais (et ce que j'apporte)</h3>
+                <p style="font-size: 0.95rem; margin-bottom: 0.75rem;">J'interviens de manière transverse sur l'ensemble de la chaîne de valeur énergétique :</p>
+                <ul class="list-styled">
+                    <li><strong>Audits & Calculs Thermiques :</strong> Réalisation de bilans DPE, calculs de déperditions par DJU et modélisations énergétiques du bâtiment.</li>
+                    <li><strong>Conception & Dimensionnement CVC :</strong> Analyse de charge thermique, dimensionnement de pompes à chaleur (PAC) et intégration solaire thermique / PV.</li>
+                    <li><strong>Ingénierie Technico-Économique :</strong> Chiffrage d'investissements (CAPEX / OPEX), analyse de rentabilité et montage des fiches CEE.</li>
+                    <li><strong>Consultation & Pilotage :</strong> Rédaction de CCTP, analyse multicritère d'offres techniques et coordination des prestataires.</li>
+                </ul>
+            </section>
+
+            <!-- Projets détaillés -->
+            <section>
+                <h3>Projets Détaillés & Réalisations Clés</h3>
+
+                <div class="project-block">
+                    <h4>
+                        <span>Rénovation & Remplacement de Chaufferie (750 kW)</span>
+                        <span class="project-tag-pill">-45% Énergie</span>
+                    </h4>
+                    <p>Réalisation d'audit DPE, calcul de DJU, métrés sous AutoCAD et simulations thermiques (BAO SED Évolution) pour la rénovation d'un bâtiment chauffé au fioul.</p>
+                    <div class="gain-highlight">✓ Résultat : Réduction validée de 45% de la consommation énergétique annuelle (de 157 309 L à 69 987 L).</div>
+                </div>
+
+                <div class="project-block">
+                    <h4>
+                        <span>Décarbonation Atelier Industriel & PAC (Michelin)</span>
+                        <span class="project-tag-pill">CAPEX 213 k€</span>
+                    </h4>
+                    <p>Étude de décarbonation vapeur vers PAC (besoin 276 MWh/an, puissance de pointe recalculée 187,4 kW à -10°C), rédaction du CCTP et sélection par matrice pondérée.</p>
+                    <div class="gain-highlight">✓ Résultat : 141 tCO₂/an évitées et couverture assurée des besoins de chauffage.</div>
+                </div>
+
+                <div class="project-block">
+                    <h4>
+                        <span>Supervision & GTB pour Bâtiment Tertiaire (5 000 m²)</span>
+                        <span class="project-tag-pill">BACnet / KNX / Modbus</span>
+                    </h4>
+                    <p>Diagnostic de fonctionnement CVC, conception de l'architecture GTB 3 niveaux (CTA, sondes, comptage) et analyse des courbes de charge.</p>
+                    <div class="gain-highlight">✓ Résultat : Réduction optimisée des consommations d'énergie primaire et suivi temps réel.</div>
+                </div>
+
+                <div class="project-block">
+                    <h4>
+                        <span>Centrale Solaire Thermodynamique 50 MW (Projet Chef de Projet)</span>
+                        <span class="project-tag-pill">Management & CCTP</span>
+                    </h4>
+                    <p>Pilotage d'une équipe de 10 ingénieurs sur 7 mois : dimensionnement champ solaire, stockage thermique sels fondus 24h, chiffrage CAPEX/OPEX et rédaction de CCTP.</p>
+                    <div class="gain-highlight">✓ Résultat : Projet validé avec business plan complet et production d'électricité continue.</div>
+                </div>
+            </section>
+
+            <!-- Outils & Compétences -->
+            <section>
+                <h3>Compétences & Outils Maîtrisés</h3>
+                <div class="badge-container">
+                    <span class="badge"><strong>Thermique & Bâtiment :</strong> Pléiades, BAO SED Évolution, AutoCAD, CEE</span>
+                    <span class="badge"><strong>Solaire & Fluides :</strong> PVsyst, COMSOL Multiphysics</span>
+                    <span class="badge"><strong>GTB & Systèmes :</strong> BACnet, Modbus, KNX, Node-RED, MQTT</span>
+                    <span class="badge"><strong>Gestion de Projet :</strong> Rédaction CCTP, Gantt, Chiffrage CAPEX/OPEX, CRM Rocksell</span>
+                </div>
+            </section>
+
+            <footer>
+                © 2026 Kadidiatou GUINDO • Portfolio Chargée d'études Énergies • Hébergé sur GitHub Pages
+            </footer>
+
+        </main>
 
     </div>
 
