@@ -11,6 +11,7 @@
             --bg-light: #f8fafc;
             --text-main: #1e293b;
             --text-muted: #64748b;
+            --border-color: #cbd5e1;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
@@ -35,6 +36,63 @@
         }
         h1 { color: var(--primary); font-size: 2rem; margin-bottom: 0.25rem; }
         .subtitle { font-size: 1.15rem; color: var(--text-muted); font-weight: 500; }
+        
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #ecfdf5;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
+            padding: 0.4rem 0.9rem;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 0.75rem;
+        }
+        .status-dot {
+            width: 9px;
+            height: 9px;
+            background-color: #10b981;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
+        }
+
+        .actions {
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.55rem 1.1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .btn-primary {
+            background-color: var(--primary);
+            color: #ffffff;
+        }
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+        .btn-secondary {
+            background-color: #ffffff;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+        .btn-secondary:hover {
+            background-color: var(--bg-light);
+            border-color: #94a3b8;
+        }
+
         h2 { color: var(--primary-dark); margin: 1.75rem 0 1rem; font-size: 1.35rem; }
         .badge-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
         .badge {
@@ -54,13 +112,6 @@
         }
         .card h3 { color: var(--text-main); font-size: 1.1rem; margin-bottom: 0.5rem; }
         .card p { font-size: 0.95rem; color: #475569; }
-        .links a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-            margin-right: 1.5rem;
-        }
-        .links a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -68,9 +119,16 @@
         <header>
             <h1>Kadidiatou Guindo</h1>
             <p class="subtitle">Ingénieure Énergie & Efficacité Énergétique | Conduite de Projets</p>
-            <div class="links" style="margin-top: 1rem;">
-                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-                <a href="mailto:votre.email@exemple.com">Me contacter</a>
+            
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                À l'écoute d'opportunités (CDI) - Île-de-France & Mobilité
+            </div>
+
+            <div class="actions">
+                <a href="CV_2026-10-31_Kadidiatou_GUINDO.pdf" target="_blank" class="btn btn-primary">📄 Télécharger mon CV (PDF)</a>
+                <a href="https://www.linkedin.com" target="_blank" class="btn btn-secondary">🔗 Profil LinkedIn</a>
+                <a href="mailto:votre.email@exemple.com" class="btn btn-secondary">✉️ Me contacter</a>
             </div>
         </header>
 
@@ -99,19 +157,4 @@
             
             <div class="card">
                 <h3>Rénovation Énergétique & Remplacement de Chaufferie (750 kW)</h3>
-                <p>Réalisation d'audit DPE, calculs de DJU, métrés sous AutoCAD et simulations thermiques (BAO SED Évolution). Projet ayant permis une réduction de 45% de la consommation énergétique.</p>
-            </div>
-
-            <div class="card">
-                <h3>Supervision & Télémétrie IoT pour Suivi Énergétique</h3>
-                <p>Mise en place d'un flux d'acquisition de données de capteurs de température et d'humidité via protocoles MQTT (Mosquitto) et intégration sur tableau de bord Node-RED.</p>
-            </div>
-
-            <div class="card">
-                <h3>Études Solaires & Dimensionnement Photovoltaïque</h3>
-                <p>Modélisation de centrales solaires et analyses de productible à l'aide de l'outil de simulation PVsyst.</p>
-            </div>
-        </section>
-    </div>
-</body>
-</html>
+                <p>Réalisation d'audit DPE, calculs de DJU, métrés sous AutoCAD et simulations thermiques (BAO SED Évolution). Projet ayant permis une réduction de 45% de la consommation énergétique.</
