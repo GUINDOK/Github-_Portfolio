@@ -6,8 +6,10 @@
     <title>Kadidiatou Guindo | Ingénieure Éco-Énergétique</title>
     <style>
         :root {
-            --primary: #0f766e;
-            --primary-dark: #115e59;
+            /* Palette Bleue Professionnelle */
+            --primary: #1d4ed8;         /* Bleu royal */
+            --primary-dark: #1e40af;    /* Bleu profond */
+            --primary-light: #eff6ff;   /* Fond bleu très doux */
             --bg-light: #f8fafc;
             --text-main: #1e293b;
             --text-muted: #64748b;
@@ -40,10 +42,11 @@
             gap: 2rem;
             flex-wrap: wrap;
         }
+        /* Photo de profil au format carré avec coins subtilement adoucis */
         .profile-img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
+            width: 145px;
+            height: 145px;
+            border-radius: 12px;
             object-fit: cover;
             border: 3px solid var(--primary);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -55,13 +58,14 @@
         h1 { color: var(--primary); font-size: 2rem; margin-bottom: 0.25rem; }
         .subtitle { font-size: 1.15rem; color: var(--text-muted); font-weight: 500; }
         
+        /* Badge de disponibilité aux couleurs bleues */
         .status-badge {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background-color: #ecfdf5;
-            color: #065f46;
-            border: 1px solid #a7f3d0;
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            border: 1px solid #bfdbfe;
             padding: 0.4rem 0.9rem;
             border-radius: 9999px;
             font-size: 0.9rem;
@@ -71,9 +75,9 @@
         .status-dot {
             width: 9px;
             height: 9px;
-            background-color: #10b981;
+            background-color: #2563eb;
             border-radius: 50%;
-            box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
         }
 
         .actions {
@@ -136,7 +140,7 @@
     <div class="container">
         <header>
             <div class="header-profile">
-                <!-- Image au format photo.png -->
+                <!-- Photo carrée -->
                 <img src="photo.png" alt="Kadidiatou Guindo" class="profile-img">
 
                 <div class="header-info">
