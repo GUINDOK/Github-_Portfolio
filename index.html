@@ -6,14 +6,13 @@
     <title>Kadidiatou Guindo | Ingénieure Éco-Énergétique</title>
     <style>
         :root {
-            /* Palette Bleu Nuit Sophistiqué & Ardoise */
-            --primary: #1e293b;         /* Ardoise sombre haut de gamme */
-            --primary-accent: #2c3e50;  /* Bleu nuit profond */
-            --accent-blue: #3b5998;     /* Bleu tailleur discret */
+            --primary: #1e293b;
+            --primary-accent: #2c3e50;
+            --accent-blue: #3b5998;
             --bg-light: #f8fafc;
-            --badge-bg: #eef2f6;        /* Gris-bleu très doux */
+            --badge-bg: #eef2f6;
             --badge-text: #334155;
-            --text-main: #0f172a;       /* Encre sombre élégante */
+            --text-main: #0f172a;
             --text-muted: #64748b;
             --border-color: #e2e8f0;
         }
@@ -46,12 +45,14 @@
             flex-wrap: wrap;
         }
         .profile-img {
-            width: 140px;
-            height: 140px;
+            width: 150px;
+            height: auto;
+            max-height: 180px;
             border-radius: 12px;
-            object-fit: cover;
+            object-fit: contain;
             border: 1px solid var(--border-color);
             box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+            background-color: #ffffff;
         }
         .header-info {
             flex: 1;
@@ -204,3 +205,26 @@
                 <span class="badge">BAO SED Évolution</span>
                 <span class="badge">Node-RED / IoT</span>
             </div>
+        </section>
+
+        <section>
+            <h2>Projets & Réalisations Clés</h2>
+            
+            <div class="card">
+                <h3>Rénovation Énergétique & Remplacement de Chaufferie (750 kW)</h3>
+                <p>Réalisation d'audit DPE, calculs de DJU, métrés sous AutoCAD et simulations thermiques (BAO SED Évolution). Projet ayant permis une réduction de 45% de la consommation énergétique.</p>
+            </div>
+
+            <div class="card">
+                <h3>Supervision & Télémétrie IoT pour Suivi Énergétique</h3>
+                <p>Mise en place d'un flux d'acquisition de données de capteurs de température et d'humidité via protocoles MQTT (Mosquitto) et intégration sur tableau de bord Node-RED.</p>
+            </div>
+
+            <div class="card">
+                <h3>Études Solaires & Dimensionnement Photovoltaïque</h3>
+                <p>Modélisation de centrales solaires et analyses de productible à l'aide de l'outil de simulation PVsyst.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
