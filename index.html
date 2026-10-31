@@ -5,45 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kadidiatou Guindo | Ingénieure Éco-Énergétique</title>
     <style>
-        :root {
-            --bg-dark: #0b0f19;
-            --bg-card: #111827;
-            --bg-card-hover: #1f2937;
-            --accent-blue: #38bdf8;
-            --accent-glow: rgba(56, 189, 248, 0.15);
-            --text-light: #f8fafc;
-            --text-dim: #94a3b8;
-            --border-dim: #1e293b;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0b1120;
+            color: #f8fafc;
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
-        /* Navigation Fixe */
         nav {
-            position: fixed;
+            position: sticky;
             top: 0;
-            left: 0;
-            right: 0;
             z-index: 100;
-            background: rgba(11, 15, 25, 0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-dim);
+            background: rgba(11, 17, 32, 0.95);
+            border-bottom: 1px solid #1e293b;
             padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
@@ -52,88 +28,360 @@
         .nav-logo {
             font-weight: 700;
             font-size: 1.1rem;
-            letter-spacing: -0.02em;
-            color: var(--text-light);
+            color: #ffffff;
             text-decoration: none;
         }
-        .nav-logo span {
-            color: var(--accent-blue);
-        }
+        .nav-logo span { color: #38bdf8; }
         .nav-links {
             display: flex;
             gap: 1.5rem;
             list-style: none;
         }
         .nav-links a {
-            color: var(--text-dim);
+            color: #94a3b8;
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
-            transition: color 0.2s ease;
+            transition: color 0.2s;
         }
-        .nav-links a:hover {
-            color: var(--accent-blue);
-        }
+        .nav-links a:hover { color: #38bdf8; }
 
-        /* Conteneur principal */
         .container {
-            max-width: 1000px;
+            max-width: 950px;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 2.5rem 1.5rem;
         }
 
-        /* Sections & Animations au scroll */
         section {
-            padding: 6rem 0;
-            border-bottom: 1px solid var(--border-dim);
+            padding: 3rem 0;
+            border-bottom: 1px solid #1e293b;
         }
-        .fade-in-section {
-            opacity: 0;
-            transform: translateY(35px);
-            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-            will-change: opacity, transform;
+        .section-tag {
+            color: #38bdf8;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 0.35rem;
         }
-        .fade-in-section.is-visible {
-            opacity: 1;
-            transform: translateY(0);
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
         }
 
-        /* Section Hero / En-tête */
-        #hero {
-            padding-top: 9rem;
-            padding-bottom: 5rem;
-        }
         .hero-layout {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 3rem;
+            gap: 2rem;
             flex-wrap: wrap;
         }
         .hero-text {
             flex: 1;
-            min-width: 300px;
+            min-width: 280px;
         }
-        .hero-status {
+        .status-badge {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background-color: rgba(34, 197, 94, 0.1);
+            background-color: rgba(34, 197, 94, 0.15);
             border: 1px solid rgba(34, 197, 94, 0.3);
             color: #4ade80;
             font-size: 0.82rem;
             font-weight: 600;
             padding: 0.35rem 0.85rem;
             border-radius: 9999px;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
         }
         .status-dot {
             width: 8px;
             height: 8px;
             background-color: #22c55e;
             border-radius: 50%;
-            box-shadow: 0 0 8px #22c55e;
         }
         h1 {
-            font-size: clamp(2.2rem, 5vw, 3.2rem);
-            font
+            font-size: 2.3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: #38bdf8;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        .hero-desc {
+            color: #94a3b8;
+            font-size: 0.98rem;
+            margin-bottom: 1.5rem;
+            max-width: 520px;
+        }
+
+        .hero-visuals {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+        }
+        .profile-img {
+            width: 140px;
+            height: 170px;
+            object-fit: contain;
+            background-color: #ffffff;
+            border-radius: 12px;
+            border: 2px solid #334155;
+            display: block;
+        }
+        .qr-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 0.75rem;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            transition: border-color 0.2s;
+        }
+        .qr-card:hover { border-color: #38bdf8; }
+        .qr-img {
+            width: 95px;
+            height: 95px;
+            border-radius: 6px;
+            background: #ffffff;
+            padding: 4px;
+            display: block;
+        }
+        .qr-label {
+            display: block;
+            margin-top: 0.4rem;
+            font-size: 0.75rem;
+            color: #f8fafc;
+            font-weight: 600;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.65rem 1.25rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-primary {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+        .btn-primary:hover {
+            background: #7dd3fc;
+        }
+        .btn-outline {
+            border: 1px solid #334155;
+            color: #f8fafc;
+            background: #1e293b;
+        }
+        .btn-outline:hover { background: #334155; }
+
+        .badge-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+        .skill-badge {
+            background: #1e293b;
+            border: 1px solid #334155;
+            color: #f8fafc;
+            padding: 0.5rem 0.9rem;
+            border-radius: 8px;
+            font-size: 0.88rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.25rem;
+        }
+        .project-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .project-card h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+        .project-card p {
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+        .project-meta {
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+        .project-tag {
+            font-size: 0.75rem;
+            color: #38bdf8;
+            background: rgba(56, 189, 248, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        footer {
+            padding: 3rem 0;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 640px) {
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#hero" class="nav-logo">Kadidiatou <span>Guindo</span></a>
+        <ul class="nav-links">
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#projects">Réalisations</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <section id="hero">
+            <div class="hero-layout">
+                <div class="hero-text">
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        À l'écoute d'opportunités (CDI) • Île-de-France & Mobilité
+                    </div>
+                    <h1>Kadidiatou Guindo</h1>
+                    <div class="hero-subtitle">Ingénieure Éco-Énergétique • Conduite de Projets</div>
+                    <p class="hero-desc">
+                        Audit thermique, dimensionnement CVC/PAC, rédaction de CCTP et pilotage de démarches de décarbonation du bâtiment.
+                    </p>
+                    <div class="btn-group">
+                        <a href="CV_2026-10-31_Kadidiatou_GUINDO.pdf" target="_blank" class="btn btn-primary">📄 Télécharger mon CV (PDF)</a>
+                        <a href="#contact" class="btn btn-outline">✉️ Me contacter</a>
+                    </div>
+                </div>
+
+                <div class="hero-visuals">
+                    <img src="photo.png" alt="Kadidiatou Guindo" class="profile-img">
+                    <a href="https://www.linkedin.com/in/kadidiatou-guindo-%C3%A9nergies-prospection-efficacit%C3%A9-cdi/" target="_blank" class="qr-card" title="Profil LinkedIn">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fkadidiatou-guindo-%25C3%25A9nergies-prospection-efficacit%25C3%25A9-cdi%2F" alt="QR Code LinkedIn" class="qr-img">
+                        <span class="qr-label">QR Code LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <span class="section-tag">Parcours</span>
+            <h2>À propos de mon profil</h2>
+            <p style="color: #94a3b8; max-width: 760px; line-height: 1.8;">
+                Titulaire d'un <strong>Master Éco-Énergétique (Bac +5)</strong>, j'interviens de la phase diagnostic et audit initial jusqu'au dimensionnement précis et à la rédaction des CCTP. Mon approche allie rigueur de calcul thermique (DJU, simulations, CEE) et gestion opérationnelle de projet.
+            </p>
+        </section>
+
+        <section id="skills">
+            <span class="section-tag">Savoir-faire</span>
+            <h2>Domaines d'expertise & Outils</h2>
+            <div class="badge-grid">
+                <span class="skill-badge">Audit & Performance Énergétique</span>
+                <span class="skill-badge">Simulation Thermique Dynamique</span>
+                <span class="skill-badge">Dimensionnement CVC & PAC</span>
+                <span class="skill-badge">Rédaction de CCTP & Chiffrage</span>
+                <span class="skill-badge">Dossiers CEE & Réglementation</span>
+                <span class="skill-badge">PVsyst</span>
+                <span class="skill-badge">AutoCAD</span>
+                <span class="skill-badge">BAO SED Évolution</span>
+                <span class="skill-badge">Node-RED / IoT</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <span class="section-tag">Expérience</span>
+            <h2>Projets & Réalisations Clés</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div>
+                        <h3>Rénovation Énergétique & Remplacement Chaufferie (750 kW)</h3>
+                        <p>Audit DPE, calcul de DJU, métrés sous AutoCAD et simulations thermiques complètes. Stratégie ayant validé une réduction de 45% de la consommation énergétique.</p>
+                    </div>
+                    <div class="project-meta">
+                        <span class="project-tag">BAO SED Évolution</span>
+                        <span class="project-tag">AutoCAD</span>
+                        <span class="project-tag">-45% Énergie</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div>
+                        <h3>Supervision & Télémétrie IoT pour Suivi Énergétique</h3>
+                        <p>Mise en place d'une chaîne d'acquisition de données thermiques et d'humidité via MQTT (Mosquitto) avec affichage sur tableau de bord interactif.</p>
+                    </div>
+                    <div class="project-meta">
+                        <span class="project-tag">Node-RED</span>
+                        <span class="project-tag">MQTT</span>
+                        <span class="project-tag">IoT</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div>
+                        <h3>Études Solaires & Dimensionnement Photovoltaïque</h3>
+                        <p>Modélisation d'installations solaires, analyse des masques d'ombrage et calcul prévisionnel du productible annuel selon les profils d'usage.</p>
+                    </div>
+                    <div class="project-meta">
+                        <span class="project-tag">PVsyst</span>
+                        <span class="project-tag">Solaire PV</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" style="border-bottom: none;">
+            <span class="section-tag">Échange</span>
+            <h2>Me contacter</h2>
+            <p style="color: #94a3b8; margin-bottom: 1.5rem;">
+                Disponible pour un poste en CDI sur l'Île-de-France et mobile pour des déplacements.
+            </p>
+            <div class="btn-group">
+                <a href="https://www.linkedin.com/in/kadidiatou-guindo-%C3%A9nergies-prospection-efficacit%C3%A9-cdi/" target="_blank" class="btn btn-primary">🔗 Profil LinkedIn</a>
+                <a href="mailto:votre.email@exemple.com" class="btn btn-outline">✉️ M'envoyer un email</a>
+            </div>
+        </section>
+
+        <footer>
+            © 2026 Kadidiatou Guindo • Ingénieure Éco-Énergétique
+        </footer>
+
+    </div>
+
+</body>
+</html>
