@@ -136,6 +136,40 @@
             line-height: 1.6;
         }
 
+        /* Bandeau Partenaires / Groupes */
+        .companies-section {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+        }
+        .companies-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.8rem;
+            text-align: center;
+        }
+        .companies-tags {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .company-pill {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 1.2rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-main);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
         section h3 {
             font-size: 1.35rem;
             font-weight: 700;
@@ -253,7 +287,8 @@
                 <h2>Kadidiatou<br>GUINDO</h2>
             </div>
 
-            <img src="photo.png" alt="Kadidiatou GUINDO" class="profile-img">
+            <!-- Photo de profil mise à jour -->
+            <img src="Photo%20portofolio.jpg" alt="Kadidiatou GUINDO" class="profile-img">
 
             <p class="sidebar-tagline">
                 <strong>Ingénieure en Efficacité Énergétique</strong><br>
@@ -264,6 +299,9 @@
             <div class="download-box">
                 <a href="CV_2026-10-31_Kadidiatou_GUINDO.pdf" target="_blank" class="btn-side btn-primary">
                     📄 Télécharger mon CV (PDF)
+                </a>
+                <a href="Projet%20Professionnelle%20_Kadidiatou%20GUINDO.pdf" target="_blank" class="btn-side btn-secondary">
+                    📑 Dossier de Motivation (PDF)
                 </a>
                 <a href="https://www.linkedin.com/in/kadidiatou-guindo-%C3%A9nergies-prospection-efficacit%C3%A9-cdi/" target="_blank" class="btn-side btn-secondary">
                     🔗 Profil LinkedIn
@@ -291,7 +329,17 @@
                 <h1>Kadidiatou GUINDO – Portfolio</h1>
                 <div class="highlight-banner">
                     <strong>Bienvenue sur mon portfolio ! Découvrez mes projets concrets en efficacité énergétique et décarbonation.</strong><br>
-                    Diplômée d'un <strong>Master Éco-Énergétique (Bac +5)</strong> avec 3 ans d'alternance industrielle (Michelin, Safran, Rockwool), je recherche un poste de <strong>Chargée d'études en efficacité énergétique</strong> en CDI pour optimiser les consommations et dimensionner les installations thermiques et CVC.
+                    Diplômée d'un <strong>Master Éco-Énergétique (Bac +5)</strong> avec 3 ans d'expérience industrielle (Michelin, Safran, Rockwool), j'allie <strong>rigueur d'études thermiques</strong> et <strong>compétences technico-commerciales</strong> pour dimensionner vos installations CVC et accompagner vos clients vers la décarbonation.
+                </div>
+            </div>
+
+            <!-- Bandeau Expérience Groupes Industriels -->
+            <div class="companies-section">
+                <div class="companies-title">3 années d'expérience au sein de groupes de référence</div>
+                <div class="companies-tags">
+                    <span class="company-pill">MICHELIN</span>
+                    <span class="company-pill">SAFRAN</span>
+                    <span class="company-pill">ROCKWOOL</span>
                 </div>
             </div>
 
@@ -307,9 +355,9 @@
                     </li>
                     <li><strong>3 années d'expériences industrielles en alternance :</strong>
                         <ul style="padding-left: 1.2rem; margin-top: 0.3rem; list-style-type: circle; color: var(--text-muted); font-size: 0.9rem;">
-                            <li><strong>Rockwool :</strong> Pilotage de 36 départements, veille marché (HELO, collectifs, industrie) et gestion de plus de 300 projets.</li>
+                            <li><strong>Rockwool (Apprentie Ingénieure Commerciale) :</strong> Pilotage de 36 départements, veille marchés publics/privés et suivi de plus de 300 projets énergétiques.</li>
                             <li><strong>Safran Actuation Systems :</strong> Déploiement méthodologique ACV (ISO 14040/44) et reporting développement durable.</li>
-                            <li><strong>Michelin (Pneu Laurent) :</strong> Management de projet de décarbonation d'un site industriel (PAC industrielle, rédaction CCTP).</li>
+                            <li><strong>Michelin (Pneu Laurent) :</strong> Management de projet de décarbonation industrielle (PAC industrielle, rédaction CCTP).</li>
                         </ul>
                     </li>
                     <li><strong>Certification complémentaire :</strong> AI Fundamentals (Google / Coursera).</li>
@@ -319,18 +367,28 @@
             <!-- Ce que je fais et ce que j'apporte -->
             <section>
                 <h3>Ce que je fais (et ce que j'apporte)</h3>
-                <p style="font-size: 0.95rem; margin-bottom: 0.75rem;">J'interviens de manière transverse sur l'ensemble de la chaîne de valeur énergétique :</p>
+                <p style="font-size: 0.95rem; margin-bottom: 0.75rem;">J'interviens sur la double facette technique et relationnelle des projets d'énergie :</p>
                 <ul class="list-styled">
                     <li><strong>Audits & Calculs Thermiques :</strong> Réalisation de bilans DPE, calculs de déperditions par DJU et modélisations énergétiques du bâtiment.</li>
                     <li><strong>Conception & Dimensionnement CVC :</strong> Analyse de charge thermique, dimensionnement de pompes à chaleur (PAC) et intégration solaire thermique / PV.</li>
-                    <li><strong>Ingénierie Technico-Économique :</strong> Chiffrage d'investissements (CAPEX / OPEX), analyse de rentabilité et montage des fiches CEE.</li>
-                    <li><strong>Consultation & Pilotage :</strong> Rédaction de CCTP, analyse multicritère d'offres techniques et coordination des prestataires.</li>
+                    <li><strong>Ingénierie d'Affaires & Relation Client :</strong> Qualification précise des besoins clients, animation de réunions techniques et cadrage technico-économique des solutions d'isolation et d'équipements.</li>
+                    <li><strong>Ingénierie Financière & CEE :</strong> Chiffrage d'investissements (CAPEX / OPEX), analyse de rentabilité et montage des fiches CEE.</li>
+                    <li><strong>Consultation & Pilotage :</strong> Rédaction de CCTP, analyse multicritère d'offres techniques et sélection de prestataires.</li>
                 </ul>
             </section>
 
             <!-- Projets détaillés -->
             <section>
                 <h3>Projets Détaillés & Réalisations Clés</h3>
+
+                <div class="project-block">
+                    <h4>
+                        <span>Ingénierie d'Affaires & Gestion de Marchés Énergétiques (Rockwool)</span>
+                        <span class="project-tag-pill">300+ Projets • 36 Départements</span>
+                    </h4>
+                    <p>Détection d'opportunités sur marchés publics et privés (HELO, collectifs, industrie), qualification technique des projets de rénovation thermique et coordination transversale entre prescripteurs, bureaux d'études et installateurs.</p>
+                    <div class="gain-highlight">✓ Résultat : Traitement des leads entrants en 48h, structuration du pipeline sous CRM et sécurisation des prescriptions techniques.</div>
+                </div>
 
                 <div class="project-block">
                     <h4>
@@ -374,19 +432,13 @@
                 <h3>Compétences & Outils Maîtrisés</h3>
                 <div class="badge-container">
                     <span class="badge"><strong>Thermique & Bâtiment :</strong> Pléiades, BAO SED Évolution, AutoCAD, CEE</span>
+                    <span class="badge"><strong>Technico-Commercial :</strong> Qualification de leads, Veille marchés, CRM Rocksell, Animation de réunion</span>
                     <span class="badge"><strong>Solaire & Fluides :</strong> PVsyst, COMSOL Multiphysics</span>
                     <span class="badge"><strong>GTB & Systèmes :</strong> BACnet, Modbus, KNX, Node-RED, MQTT</span>
-                    <span class="badge"><strong>Gestion de Projet :</strong> Rédaction CCTP, Gantt, Chiffrage CAPEX/OPEX, CRM Rocksell</span>
+                    <span class="badge"><strong>Gestion de Projet :</strong> Rédaction CCTP, Gantt, Chiffrage CAPEX/OPEX</span>
                 </div>
             </section>
 
             <footer>
                 © 2026 Kadidiatou GUINDO • Portfolio Chargée d'études Énergies • Hébergé sur GitHub Pages
             </footer>
-
-        </main>
-
-    </div>
-
-</body>
-</html>
