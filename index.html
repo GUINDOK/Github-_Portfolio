@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -160,17 +161,21 @@
         }
         .logo-item {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            text-decoration: none;
+            justify-content: center;
+            height: 45px;
+            padding: 0.2rem 0.6rem;
+            background: #ffffff;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
         }
         .logo-item img {
-            height: 38px;
+            height: 30px;
             width: auto;
             max-width: 130px;
             object-fit: contain;
             filter: grayscale(100%);
-            opacity: 0.8;
+            opacity: 0.85;
             transition: all 0.3s ease;
         }
         .logo-item:hover img {
@@ -345,14 +350,14 @@
             <div class="companies-section">
                 <div class="companies-title">3 années d'expérience au sein de groupes de référence[cite: 52]</div>
                 <div class="logos-grid">
-                    <div class="logo-item" title="Michelin / Pneu Laurent">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Michelin_logo.svg" alt="Michelin">
+                    <div class="logo-item" title="Michelin">
+                        <img src="https://companiesmarketcap.com/img/company-logos/256/ML.PA.png" alt="Michelin">
                     </div>
-                    <div class="logo-item" title="Safran Actuation Systems">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Safran_logo.svg" alt="Safran">
+                    <div class="logo-item" title="Safran">
+                        <img src="https://companiesmarketcap.com/img/company-logos/256/SAF.PA.png" alt="Safran">
                     </div>
                     <div class="logo-item" title="Rockwool">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Rockwool_logo.svg" alt="Rockwool">
+                        <img src="https://companiesmarketcap.com/img/company-logos/256/ROCK-B.CO.png" alt="Rockwool">
                     </div>
                 </div>
             </div>
@@ -398,7 +403,7 @@
                 <div class="project-block">
                     <h4>
                         <span>Ingénierie d'Affaires & Gestion de Marchés Énergétiques (Rockwool)</span>
-                        <span class="project-tag-pill">300+ Projets • 36 Départements[cite: 18, 25]</span>
+                        <span class="project-tag-pill">300+ Projets • 36 Départements</span>
                     </h4>
                     <p>Détection d'opportunités sur marchés publics et privés (HELO, collectifs, industrie), qualification technique des projets de rénovation thermique et coordination transversale entre prescripteurs, bureaux d'études et installateurs[cite: 17, 18, 23, 24, 25, 54].</p>
                     <div class="gain-highlight">✓ Résultat : Traitement des leads entrants en 48h, structuration du pipeline sous CRM et sécurisation des prescriptions techniques[cite: 19, 21, 22, 54].</div>
@@ -407,7 +412,7 @@
                 <div class="project-block">
                     <h4>
                         <span>Rénovation & Remplacement de Chaufferie (750 kW)</span>
-                        <span class="project-tag-pill">-45% Énergie[cite: 55]</span>
+                        <span class="project-tag-pill">-45% Énergie</span>
                     </h4>
                     <p>Réalisation d'audit DPE, calcul de DJU, métrés sous AutoCAD et simulations thermiques (BAO SED Évolution) pour la rénovation d'un bâtiment chauffé au fioul[cite: 55].</p>
                     <div class="gain-highlight">✓ Résultat : Réduction validée de 45% de la consommation énergétique annuelle (de 157 309 L à 69 987 L)[cite: 55].</div>
@@ -416,7 +421,7 @@
                 <div class="project-block">
                     <h4>
                         <span>Décarbonation Atelier Industriel & PAC (Michelin)</span>
-                        <span class="project-tag-pill">CAPEX 213 k€[cite: 31, 54]</span>
+                        <span class="project-tag-pill">CAPEX 213 k€</span>
                     </h4>
                     <p>Étude de décarbonation vapeur vers PAC (besoin 276 MWh/an, puissance de pointe recalculée 187,4 kW à -10°C), rédaction du CCTP et sélection par matrice pondérée[cite: 30, 31, 32].</p>
                     <div class="gain-highlight">✓ Résultat : 141 tCO₂/an évitées et couverture assurée des besoins de chauffage[cite: 54].</div>
@@ -425,7 +430,7 @@
                 <div class="project-block">
                     <h4>
                         <span>Supervision & GTB pour Bâtiment Tertiaire (5 000 m²)</span>
-                        <span class="project-tag-pill">BACnet / KNX / Modbus[cite: 42, 43]</span>
+                        <span class="project-tag-pill">BACnet / KNX / Modbus</span>
                     </h4>
                     <p>Diagnostic de fonctionnement CVC, conception de l'architecture GTB 3 niveaux (CTA, sondes, comptage) et analyse des courbes de charge[cite: 41, 42, 43, 44].</p>
                     <div class="gain-highlight">✓ Résultat : Réduction optimisée des consommations d'énergie primaire et suivi temps réel[cite: 44].</div>
@@ -434,32 +439,7 @@
                 <div class="project-block">
                     <h4>
                         <span>Centrale Solaire Thermodynamique 50 MW (Projet Chef de Projet)</span>
-                        <span class="project-tag-pill">Management & CCTP[cite: 34, 35, 36, 54]</span>
+                        <span class="project-tag-pill">Management & CCTP</span>
                     </h4>
                     <p>Pilotage d'une équipe de 10 ingénieurs sur 7 mois : dimensionnement champ solaire, stockage thermique sels fondus 24h, chiffrage CAPEX/OPEX et rédaction de CCTP[cite: 34, 35, 36, 37, 54].</p>
-                    <div class="gain-highlight">✓ Résultat : Projet validé avec business plan complet et production d'électricité continue[cite: 34, 36, 37].</div>
-                </div>
-            </section>
-
-            <!-- Outils & Compétences -->
-            <section>
-                <h3>Compétences & Outils Maîtrisés</h3>
-                <div class="badge-container">
-                    <span class="badge"><strong>Thermique & Bâtiment :</strong> Pléiades, BAO SED Évolution, AutoCAD, CEE</span>
-                    <span class="badge"><strong>Technico-Commercial :</strong> Qualification de leads, Veille marchés, CRM Rocksell, Animation de réunion</span>
-                    <span class="badge"><strong>Solaire & Fluides :</strong> PVsyst, COMSOL Multiphysics</span>
-                    <span class="badge"><strong>GTB & Systèmes :</strong> BACnet, Modbus, KNX, Node-RED, MQTT</span>
-                    <span class="badge"><strong>Gestion de Projet :</strong> Rédaction CCTP, Gantt, Chiffrage CAPEX/OPEX</span>
-                </div>
-            </section>
-
-            <footer>
-                © 2026 Kadidiatou GUINDO • Portfolio Chargée d'études Énergies • Hébergé sur GitHub Pages
-            </footer>
-
-        </main>
-
-    </div>
-
-</body>
-</html>
+                    <div class="gain-highlight">✓ Résultat : Projet validé avec business plan complet et production
