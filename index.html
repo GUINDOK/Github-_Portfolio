@@ -135,6 +135,50 @@
             line-height: 1.6;
         }
 
+        /* Bandeau Logos Entreprises */
+        .companies-section {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.2rem 1.5rem;
+        }
+        .companies-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .logos-grid {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .logo-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+        }
+        .logo-item img {
+            height: 38px;
+            width: auto;
+            max-width: 130px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+        .logo-item:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
         section h3 {
             font-size: 1.35rem;
             font-weight: 700;
@@ -256,18 +300,16 @@
 
             <p class="sidebar-tagline">
                 <strong>Ingénieure en Efficacité Énergétique</strong><br>
-                Chargée d'études Énergies <br>
-                Mobilité : Paris et Périphérie / Permis B : en cours
-                Disponibilité : immediatement / CDI
+                Chargée d'études Énergies (CDI)<br>
+                Paris et Périphérie (Mobile) / Permis B : en cours
             </p>
 
             <div class="download-box">
                 <a href="CV_2026-10-31_Kadidiatou_GUINDO.pdf" target="_blank" class="btn-side btn-primary">
                     📄 Télécharger mon CV (PDF)
-                    </a>
-                <!-- Bouton pour le dossier de motivation / projet pro -->
+                </a>
                 <a href="Projet%20Professionnelle%20_Kadidiatou%20GUINDO.pdf" target="_blank" class="btn-side btn-secondary">
-                    📑 Projet professionnelle (PDF)
+                    📑 Dossier de Motivation (PDF)
                 </a>
                 <a href="https://www.linkedin.com/in/kadidiatou-guindo-%C3%A9nergies-prospection-efficacit%C3%A9-cdi/" target="_blank" class="btn-side btn-secondary">
                     🔗 Profil LinkedIn
@@ -294,8 +336,25 @@
             <div class="main-header">
                 <h1>Kadidiatou GUINDO – Portfolio</h1>
                 <div class="highlight-banner">
-                    <strong>Bienvenue sur mon portfolio ! </strong><br>
-    
+                    <strong>Bienvenue sur mon portfolio ! Découvrez mes projets concrets en efficacité énergétique et décarbonation.</strong><br>
+                    Diplômée d'un <strong>Master Éco-Énergétique (Bac +5)</strong> avec 3 ans d'expérience industrielle (Michelin, Safran, Rockwool), j'allie <strong>rigueur d'études thermiques</strong> et <strong>compétences technico-commerciales</strong> pour dimensionner vos installations CVC et accompagner vos clients vers la décarbonation[cite: 10, 52].
+                </div>
+            </div>
+
+            <!-- Bandeau Logos Entreprises d'accueil -->
+            <div class="companies-section">
+                <div class="companies-title">3 années d'expérience au sein de groupes de référence[cite: 52]</div>
+                <div class="logos-grid">
+                    <div class="logo-item" title="Michelin / Pneu Laurent">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Michelin_logo.svg" alt="Michelin">
+                    </div>
+                    <div class="logo-item" title="Safran Actuation Systems">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Safran_logo.svg" alt="Safran">
+                    </div>
+                    <div class="logo-item" title="Rockwool">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Rockwool_logo.svg" alt="Rockwool">
+                    </div>
+                </div>
             </div>
 
             <!-- À propos de mon parcours -->
@@ -304,30 +363,31 @@
                 <ul class="list-styled">
                     <li><strong>Formations & Diplômes :</strong>
                         <ul style="padding-left: 1.2rem; margin-top: 0.3rem; list-style-type: circle; color: var(--text-muted); font-size: 0.9rem;">
-                            <li><strong>Master Éco-Énergétique (Bac +5)</strong> – ENSIATE.</li>
-                            <li><strong>Diplôme national de LICENCE Sciences, Technologies, Santé, mention Sciences pour l'ingénieur, parcours type Énergie et développement durable</strong> – CNAM / ENSIATE.</li>
+                            <li><strong>Master Éco-Énergétique (Bac +5)</strong> – ENSIATE[cite: 8, 10, 54].</li>
+                            <li><strong>Diplôme national de LICENCE Sciences, Technologies, Santé, mention Sciences pour l'ingénieur, parcours type Énergie et développement durable</strong> – CNAM / ENSIATE[cite: 10, 54].</li>
                         </ul>
                     </li>
-                    <li><strong>3 années d'expériences :</strong>
+                    <li><strong>3 années d'expériences industrielles en alternance :</strong>
                         <ul style="padding-left: 1.2rem; margin-top: 0.3rem; list-style-type: circle; color: var(--text-muted); font-size: 0.9rem;">
-                            <li><strong>Rockwool :</strong> Pilotage de 36 départements, veille marché (HELO, collectifs, industrie) et gestion de plus de 300 projets.</li>
-                            <li><strong>Safran Actuation Systems :</strong> Déploiement méthodologique ACV (ISO 14040/44) et reporting développement durable.</li>
-                            <li><strong>Michelin (Pneu Laurent) :</strong> Management de projet de décarbonation d'un site industriel (PAC industrielle, rédaction CCTP).</li>
+                            <li><strong>Rockwool (Apprentie Ingénieure Commerciale) :</strong> Pilotage de 36 départements, veille marchés publics/privés et suivi de plus de 300 projets énergétiques[cite: 10, 17, 18, 24, 25, 54].</li>
+                            <li><strong>Safran Actuation Systems :</strong> Déploiement méthodologique ACV (ISO 14040/44) et reporting développement durable[cite: 10, 54].</li>
+                            <li><strong>Michelin (Pneu Laurent) :</strong> Management de projet de décarbonation industrielle (PAC industrielle, rédaction CCTP)[cite: 10, 30, 54].</li>
                         </ul>
                     </li>
-                    <li><strong>Certification complémentaire :</strong> AI Fundamentals (Google / Coursera).</li>
+                    <li><strong>Certification complémentaire :</strong> AI Fundamentals (Google / Coursera)[cite: 62].</li>
                 </ul>
             </section>
 
             <!-- Ce que je fais et ce que j'apporte -->
             <section>
                 <h3>Ce que je fais (et ce que j'apporte)</h3>
-                <p style="font-size: 0.95rem; margin-bottom: 0.75rem;">J'interviens de manière transverse sur l'ensemble de la chaîne de valeur énergétique :</p>
+                <p style="font-size: 0.95rem; margin-bottom: 0.75rem;">J'interviens sur la double facette technique et relationnelle des projets d'énergie :</p>
                 <ul class="list-styled">
-                    <li><strong>Audits & Calculs Thermiques :</strong> Réalisation de bilans DPE, calculs de déperditions par DJU et modélisations énergétiques du bâtiment.</li>
-                    <li><strong>Conception & Dimensionnement CVC :</strong> Analyse de charge thermique, dimensionnement de pompes à chaleur (PAC) et intégration solaire thermique / PV.</li>
-                    <li><strong>Ingénierie Technico-Économique :</strong> Chiffrage d'investissements (CAPEX / OPEX), analyse de rentabilité et montage des fiches CEE.</li>
-                    <li><strong>Consultation & Pilotage :</strong> Rédaction de CCTP, analyse multicritère d'offres techniques et coordination des prestataires.</li>
+                    <li><strong>Audits & Calculs Thermiques :</strong> Réalisation de bilans DPE, calculs de déperditions par DJU et modélisations énergétiques du bâtiment[cite: 32, 55].</li>
+                    <li><strong>Conception & Dimensionnement CVC :</strong> Analyse de charge thermique, dimensionnement de pompes à chaleur (PAC) et intégration solaire thermique / PV[cite: 32, 33, 34].</li>
+                    <li><strong>Ingénierie d'Affaires & Relation Client :</strong> Qualification précise des besoins clients, animation de réunions techniques et cadrage technico-économique des solutions d'isolation et d'équipements[cite: 11, 22, 54].</li>
+                    <li><strong>Ingénierie Financière & CEE :</strong> Chiffrage d'investissements (CAPEX / OPEX), analyse de rentabilité et montage des fiches CEE[cite: 31, 37, 52, 54].</li>
+                    <li><strong>Consultation & Pilotage :</strong> Rédaction de CCTP, analyse multicritère d'offres techniques et sélection de prestataires[cite: 30, 36, 52].</li>
                 </ul>
             </section>
 
@@ -337,38 +397,47 @@
 
                 <div class="project-block">
                     <h4>
-                        <span>Rénovation & Remplacement de Chaufferie (750 kW)</span>
-                        <span class="project-tag-pill">-45% Énergie</span>
+                        <span>Ingénierie d'Affaires & Gestion de Marchés Énergétiques (Rockwool)</span>
+                        <span class="project-tag-pill">300+ Projets • 36 Départements[cite: 18, 25]</span>
                     </h4>
-                    <p>Réalisation d'audit DPE, calcul de DJU, métrés sous AutoCAD et simulations thermiques (BAO SED Évolution) pour la rénovation d'un bâtiment chauffé au fioul.</p>
-                    <div class="gain-highlight">✓ Résultat : Réduction validée de 45% de la consommation énergétique annuelle (de 157 309 L à 69 987 L).</div>
+                    <p>Détection d'opportunités sur marchés publics et privés (HELO, collectifs, industrie), qualification technique des projets de rénovation thermique et coordination transversale entre prescripteurs, bureaux d'études et installateurs[cite: 17, 18, 23, 24, 25, 54].</p>
+                    <div class="gain-highlight">✓ Résultat : Traitement des leads entrants en 48h, structuration du pipeline sous CRM et sécurisation des prescriptions techniques[cite: 19, 21, 22, 54].</div>
+                </div>
+
+                <div class="project-block">
+                    <h4>
+                        <span>Rénovation & Remplacement de Chaufferie (750 kW)</span>
+                        <span class="project-tag-pill">-45% Énergie[cite: 55]</span>
+                    </h4>
+                    <p>Réalisation d'audit DPE, calcul de DJU, métrés sous AutoCAD et simulations thermiques (BAO SED Évolution) pour la rénovation d'un bâtiment chauffé au fioul[cite: 55].</p>
+                    <div class="gain-highlight">✓ Résultat : Réduction validée de 45% de la consommation énergétique annuelle (de 157 309 L à 69 987 L)[cite: 55].</div>
                 </div>
 
                 <div class="project-block">
                     <h4>
                         <span>Décarbonation Atelier Industriel & PAC (Michelin)</span>
-                        <span class="project-tag-pill">CAPEX 213 k€</span>
+                        <span class="project-tag-pill">CAPEX 213 k€[cite: 31, 54]</span>
                     </h4>
-                    <p>Étude de décarbonation vapeur vers PAC (besoin 276 MWh/an, puissance de pointe recalculée 187,4 kW à -10°C), rédaction du CCTP et sélection par matrice pondérée.</p>
-                    <div class="gain-highlight">✓ Résultat : 141 tCO₂/an évitées et couverture assurée des besoins de chauffage.</div>
+                    <p>Étude de décarbonation vapeur vers PAC (besoin 276 MWh/an, puissance de pointe recalculée 187,4 kW à -10°C), rédaction du CCTP et sélection par matrice pondérée[cite: 30, 31, 32].</p>
+                    <div class="gain-highlight">✓ Résultat : 141 tCO₂/an évitées et couverture assurée des besoins de chauffage[cite: 54].</div>
                 </div>
 
                 <div class="project-block">
                     <h4>
                         <span>Supervision & GTB pour Bâtiment Tertiaire (5 000 m²)</span>
-                        <span class="project-tag-pill">BACnet / KNX / Modbus</span>
+                        <span class="project-tag-pill">BACnet / KNX / Modbus[cite: 42, 43]</span>
                     </h4>
-                    <p>Diagnostic de fonctionnement CVC, conception de l'architecture GTB 3 niveaux (CTA, sondes, comptage) et analyse des courbes de charge.</p>
-                    <div class="gain-highlight">✓ Résultat : Réduction optimisée des consommations d'énergie primaire et suivi temps réel.</div>
+                    <p>Diagnostic de fonctionnement CVC, conception de l'architecture GTB 3 niveaux (CTA, sondes, comptage) et analyse des courbes de charge[cite: 41, 42, 43, 44].</p>
+                    <div class="gain-highlight">✓ Résultat : Réduction optimisée des consommations d'énergie primaire et suivi temps réel[cite: 44].</div>
                 </div>
 
                 <div class="project-block">
                     <h4>
                         <span>Centrale Solaire Thermodynamique 50 MW (Projet Chef de Projet)</span>
-                        <span class="project-tag-pill">Management & CCTP</span>
+                        <span class="project-tag-pill">Management & CCTP[cite: 34, 35, 36, 54]</span>
                     </h4>
-                    <p>Pilotage d'une équipe de 10 ingénieurs sur 7 mois : dimensionnement champ solaire, stockage thermique sels fondus 24h, chiffrage CAPEX/OPEX et rédaction de CCTP.</p>
-                    <div class="gain-highlight">✓ Résultat : Projet validé avec business plan complet et production d'électricité continue.</div>
+                    <p>Pilotage d'une équipe de 10 ingénieurs sur 7 mois : dimensionnement champ solaire, stockage thermique sels fondus 24h, chiffrage CAPEX/OPEX et rédaction de CCTP[cite: 34, 35, 36, 37, 54].</p>
+                    <div class="gain-highlight">✓ Résultat : Projet validé avec business plan complet et production d'électricité continue[cite: 34, 36, 37].</div>
                 </div>
             </section>
 
@@ -377,9 +446,10 @@
                 <h3>Compétences & Outils Maîtrisés</h3>
                 <div class="badge-container">
                     <span class="badge"><strong>Thermique & Bâtiment :</strong> Pléiades, BAO SED Évolution, AutoCAD, CEE</span>
+                    <span class="badge"><strong>Technico-Commercial :</strong> Qualification de leads, Veille marchés, CRM Rocksell, Animation de réunion</span>
                     <span class="badge"><strong>Solaire & Fluides :</strong> PVsyst, COMSOL Multiphysics</span>
                     <span class="badge"><strong>GTB & Systèmes :</strong> BACnet, Modbus, KNX, Node-RED, MQTT</span>
-                    <span class="badge"><strong>Gestion de Projet :</strong> Rédaction CCTP, Gantt, Chiffrage CAPEX/OPEX, CRM Rocksell</span>
+                    <span class="badge"><strong>Gestion de Projet :</strong> Rédaction CCTP, Gantt, Chiffrage CAPEX/OPEX</span>
                 </div>
             </section>
 
